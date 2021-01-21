@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voce é estrangeiro?</title>
+</head>
+<body>
+    <h1>Alfandega</h1>
+    Seu pais: <input type="text" name="pais" id="pais">
+    <input type="button" value="Verificar" onclick='pesquisar()'>
+    <div id ='res'></div>
+    <script>
+        //Referente ao exercicio 09
+        function pesquisar(){
+            var txtv = window.document.getElementById('pais')
+            var res = window.document.getElementById('res')
+            var origin = String(txtv.value)
+
+            res.innerHTML= `<p>Seu pais de origem é ${origin}`
+                if (origin > 'Brasil'){
+                    res.innerHTML += `<p>Voce é <strong>ESTRANGEIRO</strong> volte para o seu pais</p>`
+                } else {
+
+                    res.innerHTML += `<p>Voce é <strong>BRASILEIRO</strong> seja muito bem vindo</p>`
+
+                }
+           
+        }
+    </script>
+</body>
+</html>
